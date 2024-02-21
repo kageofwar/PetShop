@@ -33,32 +33,15 @@
       <botaoCategoria imageName="DogHouse.png" categoriaNome="Casa" />
     </div>
 
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center items-center mt-10">
 
-      <div class="carousel w-full">
-        <div id="slide3" class="carousel-item flex justify-center items-center space-x-4 w-full">
-          <a href="#slide2" class="btn btn-circle bg-transparent border-white text-white">❮</a>
-          <img src="../assets/banners/RACOES.gif" class="w-[90%] rounded-[75px]" />
-          <a href="#slide4" class="btn btn-circle bg-transparent border-white text-white">❯</a>
-        </div>
-        <div id="slide1" class="carousel-item flex justify-center items-center space-x-4 w-full ">
-          <a href="#slide4" class="btn btn-circle bg-transparent border-white text-white">❮</a>
-          <img src="../assets/banners/BRINQUEDOS.gif" class="w-[90%] rounded-[75px]" />
-          <a href="#slide2" class="btn btn-circle bg-transparent border-white text-white">❯</a>
-        </div>
-        <div id="slide2" class="carousel-item flex justify-center items-center space-x-4 w-full">
-          <a href="#slide1" class="btn btn-circle bg-transparent border-white text-white">❮</a>
-          <img src="../assets/banners/OUTLET.jpg" class="w-[90%] rounded-[75px]" />
-          <a href="#slide3" class="btn btn-circle bg-transparent border-white text-white">❯</a>
-        </div>
-        <div id="slide4" class="carousel-item flex justify-center items-center space-x-4 w-full">
-          <a href="#slide3" class="btn btn-circle bg-transparent border-white text-white">❮</a>
-          <img src="../assets/banners/TAPETES.gif" class="w-[90%] rounded-[75px]" />
-          <a href="#slide1" class="btn btn-circle bg-transparent border-white text-white">❯</a>
-        </div>
-
-      </div>
-
+      <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false, }"
+        :navigation="true" :modules="modules" class="mySwiper">
+        <swiper-slide><img src="../assets/banners/RACOES.gif" class="rounded-full"></swiper-slide>
+        <swiper-slide><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></swiper-slide>
+        <swiper-slide><img src="../assets/banners/OUTLET.jpg" class="rounded-full"></swiper-slide>
+        <swiper-slide><img src="../assets/banners/TAPETES.gif" class="rounded-full"></swiper-slide>
+      </swiper>
     </div>
 
     <div class="mt-16">
@@ -103,12 +86,12 @@
             <img src="../assets/Pets.png" alt="" class="h-[12vh]">
           </div>
           <div class="grid grid-cols-6 justify-items-center items-center">
-            <botaoRecomendacao nomeDaImagem="Timetable.png" RecomendacaoTitulo="Compra Programada"/>
-            <botaoRecomendacao nomeDaImagem="Discount.png" RecomendacaoTitulo="Ofertas Exclusivas"/>
-            <botaoRecomendacao nomeDaImagem="Shop.png" RecomendacaoTitulo="Conheça nossas lojas"/>
-            <botaoRecomendacao nomeDaImagem="Barbershop.png" RecomendacaoTitulo="Serviço de tosa"/>
-            <botaoRecomendacao nomeDaImagem="WhatsApp.png" RecomendacaoTitulo="WhatsApp"/>
-            <botaoRecomendacao nomeDaImagem="Instagram.png" RecomendacaoTitulo="Instagram"/>
+            <botaoRecomendacao nomeDaImagem="Timetable.png" RecomendacaoTitulo="Compra Programada" />
+            <botaoRecomendacao nomeDaImagem="Discount.png" RecomendacaoTitulo="Ofertas Exclusivas" />
+            <botaoRecomendacao nomeDaImagem="Shop.png" RecomendacaoTitulo="Conheça nossas lojas" />
+            <botaoRecomendacao nomeDaImagem="Barbershop.png" RecomendacaoTitulo="Serviço de tosa" />
+            <botaoRecomendacao nomeDaImagem="WhatsApp.png" RecomendacaoTitulo="WhatsApp" />
+            <botaoRecomendacao nomeDaImagem="Instagram.png" RecomendacaoTitulo="Instagram" />
           </div>
         </div>
       </div>
@@ -117,31 +100,28 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import botaoCategoria from '@/components/botaoCategoria.vue';
-import CardRecomendacao from '@/components/CardRecomendacao.vue'
 import botaoRecomendacao from '@/components/botaoRecomendacao.vue'
 
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+////Swiper
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-const currentSlide = ref(1);
-const intervalId = ref(null);
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value % 4) + 1;
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Pagination, Navigation],
+    };
+  },
 };
+////Swiper
 
-const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 2 + 4) % 4 + 1;
-};
 
-onMounted(() => {
-  intervalId.value = setInterval(() => {
-    nextSlide();
-  }, 3000);
-});
-
-onBeforeUnmount(() => {
-  clearInterval(intervalId.value);
-});
 </script>
