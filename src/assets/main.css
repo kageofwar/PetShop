@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --azul-escuro: #275BA8;
+    --azul-claro: #5096B5;
+}

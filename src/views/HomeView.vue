@@ -1,7 +1,7 @@
 <template>
-  <div class="h-full bg-[#5096B5]">
+  <div class="h-full bg-[--azul-claro]">
     <div>
-      <div class="flex justify-center items-center text-white h-[41px] bg-[#275BA8]">
+      <div class="flex justify-center items-center text-white h-[41px] bg-[--azul-escuro]">
         <img src="../assets/icons/headerIcons/Magnetic Card.png" alt="credit card" class="h-[30px] mb-[8px]">
         <p class="p-[10px]">Parcele em até 3x sem juros. Com parecelas a partir de $75.</p>
         <img src="../assets/icons/headerIcons/Magnetic Card.png" alt="credit card" class="h-[30px] mb-[8px]">
@@ -11,13 +11,29 @@
         <img src="../assets/PetFuad-removebg.png" alt="logo da loja" class="h-[100px]">
         <div class="flex justify-end w-[50%]">
           <input type="search" name="" id="" placeholder="O que seu Pet precisa?"
-            class="text-center bg-[#275BA8] h-[55px] w-[100%] border rounded-[200px] placeholder:text-white">
-          <a href="#" class="absolute mr-5"><img src="../assets/icons/headerIcons/Search.png" alt="imagem de lupa"></a>
+            class="text-center bg-[--azul-escuro] h-[55px] w-[100%] border rounded-[200px] placeholder:text-white">
+          <a href="#" class="absolute mr-5 -translate-y-[5px]"><img src="../assets/icons/headerIcons/Search.png"
+              alt="imagem de lupa"></a>
         </div>
-        <div class="flex space-x-6 h-9">
+        <div class="flex space-x-6 h-9" style="list-style: none;">
           <img src="../assets/icons/headerIcons/Shop.png" alt="shop">
           <img src="../assets/icons/headerIcons/Shopping Cart.png" alt="carrinho">
-          <img src="../assets/icons/headerIcons/Phone.png" alt="telefone">
+
+          <div class="">
+            <input type="checkbox" id="menu" class="container__botao hidden">
+            <label for="menu">
+              <img src="../assets/icons/headerIcons/Phone.png" alt="telefone"
+                class="h-9 transition ease-in-out delay-150 hover:scale-110 duration-300">
+            </label>
+            <div class="lista-menu flex justify-center">
+              <div
+                class="flex flex-col justify-center items-center absolute bg-white w-[40vh] -translate-x-44 translate-y-2 h-[15vh] rounded-2xl sombra">
+                <h2 class="text-[25px] text-[--azul-escuro]">Telefones</h2>
+                <h2 class="text-[20px] text-black">(11) 9 9999-9999</h2>
+                <h2 class="text-[20px] text-black">(11) 9 9999-9999</h2>
+              </div>
+            </div>
+          </div>
           <img src="../assets/icons/headerIcons/Name.png" alt="perfil">
         </div>
       </div>
@@ -48,28 +64,29 @@
       <img src="../assets/Vector.png" alt="">
       <div class="bg-white">
         <div class="flex justify-center -translate-y-20">
-          <h2 class="text-[5vh] text-[#5096B5]">Seu Pet também pode gostar ❤️</h2>
+          <h2 class="text-[5vh] text-[--azul-claro] ">Seu Pet também pode gostar ❤️</h2>
         </div>
 
-        <!--<div class="mt-20">
-          <h2 class="text-[3vh] text-[#5096B5] ml-28 mb-5">Cachorros</h2>
-          <div class="grid grid-cols-4 justify-items-center">
-            <CardRecomendacao nomeProduto="Ração Vital Pro Pedigree 1kg" valor="99,00" imagemProduto="pedrigre.png" />
-            <CardRecomendacao nomeProduto="Ração Vital Pro Pedigree 1kg" valor="99,00" imagemProduto="pedrigre.png" />
-            <CardRecomendacao nomeProduto="Ração Vital Pro Pedigree 1kg" valor="99,00" imagemProduto="pedrigre.png" />
-            <CardRecomendacao nomeProduto="Ração Vital Pro Pedigree 1kg" valor="99,00" imagemProduto="pedrigre.png" />
+        <div class="grid grid-cols-[40%_60%] justify-items-center">
+          <swiper :direction="'vertical'" :pagination="{clickable: true}" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
+            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🐵</div></swiper-slide>
+            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🦁</div></swiper-slide>
+            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🦊</div></swiper-slide>
+          </swiper>
+          <div class="">
+            <div class="flex gap-28">
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+            </div>
+            <div class="flex gap-28">
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+            </div>
           </div>
         </div>
 
-        <div class="mt-20">
-          <h2 class="text-[3vh] text-[#5096B5] ml-28 mb-5">Gatos</h2>
-          <div class="grid grid-cols-4 justify-items-center">
-            <CardRecomendacao nomeProduto="Ração Whiskas Carne 10kg" valor="99,00" imagemProduto="whiskas.webp" />
-            <CardRecomendacao nomeProduto="Ração Whiskas Carne 10kg" valor="99,00" imagemProduto="whiskas.webp" />
-            <CardRecomendacao nomeProduto="Ração Whiskas Carne 10kg" valor="99,00" imagemProduto="whiskas.webp" />
-            <CardRecomendacao nomeProduto="Ração Whiskas Carne 10kg" valor="99,00" imagemProduto="whiskas.webp" />
-          </div>
-        </div>-->
       </div>
       <img src="../assets/Vector (1).png" alt="" class="-translate-y-[1px]">
 
@@ -96,7 +113,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -108,12 +124,15 @@ import botaoRecomendacao from '@/components/botaoRecomendacao.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
+    botaoCategoria,
+    botaoRecomendacao
   },
   setup() {
     return {
@@ -123,5 +142,18 @@ export default {
 };
 ////Swiper
 
-
 </script>
+
+<style>
+.lista-menu {
+  display: none;
+}
+
+.container__botao:checked~.lista-menu {
+  display: block;
+}
+
+.container__botao:hover~.lista-menu {
+  display: block;
+}
+</style>
