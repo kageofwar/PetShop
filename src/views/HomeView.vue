@@ -50,8 +50,7 @@
     </div>
 
     <div class="flex justify-center items-center mt-10">
-
-      <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{ delay: 2500, disableOnInteraction: false, }"
+      <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules" class="mySwiper">
         :navigation="true" :modules="modules" class="mySwiper">
         <swiper-slide><img src="../assets/banners/RACOES.gif" class="rounded-full"></swiper-slide>
         <swiper-slide><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></swiper-slide>
@@ -68,22 +67,44 @@
         </div>
 
         <div class="grid grid-cols-[40%_60%] justify-items-center">
-          <swiper :direction="'vertical'" :pagination="{clickable: true}" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
-            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🐵</div></swiper-slide>
-            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🦁</div></swiper-slide>
-            <swiper-slide class="bg-[#D9D9D9]"><div class="h-[100%] flex justify-center items-center">🦊</div></swiper-slide>
+
+          <swiper :direction="'vertical'" :pagination="{ clickable: true }" :modules="modules"
+            :autoplay="{ delay: 2500, disableOnInteraction: false, }"
+            class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
+            <swiper-slide class="bg-[#D9D9D9]">
+              <div class="h-[100%] flex justify-center items-center">🐵</div>
+            </swiper-slide>
+            <swiper-slide class="bg-[#D9D9D9]">
+              <div class="h-[100%] flex justify-center items-center">🦁</div>
+            </swiper-slide>
+            <swiper-slide class="bg-[#D9D9D9]">
+              <div class="h-[100%] flex justify-center items-center">🦊</div>
+            </swiper-slide>
           </swiper>
-          <div class="">
-            <div class="flex gap-28">
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+
+          <div class="flex flex-col justify-center items-center gap-28">
+            <div class="flex w-[90vh] h-[20vh]">
+              <swiper :slidesPerView="3" :space-between="115" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="swiper-wrapper">
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">1</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">2</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">3</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">4</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">5</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">6</div></swiper-slide>
+              </swiper>
             </div>
-            <div class="flex gap-28">
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
-              <div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">Card Destaque</div>
+
+            <div class="flex w-[90vh] h-[20vh] ">
+              <swiper :slidesPerView="3" :space-between="115" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="swiper-wrapper">
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">1</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">2</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">3</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">4</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">5</div></swiper-slide>
+                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">6</div></swiper-slide>
+              </swiper>
             </div>
+
           </div>
         </div>
 
@@ -120,11 +141,11 @@
 import botaoCategoria from '@/components/botaoCategoria.vue';
 import botaoRecomendacao from '@/components/botaoRecomendacao.vue'
 
-////Swiper
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default {
@@ -138,14 +159,12 @@ export default {
     return {
       modules: [Autoplay, Pagination, Navigation],
     };
-  },
+  }
 };
-////Swiper
 
 </script>
 
-<style>
-.lista-menu {
+<style>.lista-menu {
   display: none;
 }
 
@@ -155,5 +174,9 @@ export default {
 
 .container__botao:hover~.lista-menu {
   display: block;
+}
+
+.swiper-button-prev, .swiper-button-next {
+
 }
 </style>
