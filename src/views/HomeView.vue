@@ -50,8 +50,7 @@
     </div>
 
     <div class="flex justify-center items-center mt-10">
-      <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules" class="mySwiper">
-        :navigation="true" :modules="modules" class="mySwiper">
+      <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules"  class="mySwiper" :autoplay="{ delay: 2500, disableOnInteraction: false, }">
         <swiper-slide><img src="../assets/banners/RACOES.gif" class="rounded-full"></swiper-slide>
         <swiper-slide><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></swiper-slide>
         <swiper-slide><img src="../assets/banners/OUTLET.jpg" class="rounded-full"></swiper-slide>
@@ -71,37 +70,37 @@
           <swiper :direction="'vertical'" :pagination="{ clickable: true }" :modules="modules"
             :autoplay="{ delay: 2500, disableOnInteraction: false, }"
             class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
-            <swiper-slide class="bg-[#D9D9D9]">
+            <swiper-slide class="">
               <div class="h-[100%] flex justify-center items-center">🐵</div>
             </swiper-slide>
-            <swiper-slide class="bg-[#D9D9D9]">
+            <swiper-slide class="">
               <div class="h-[100%] flex justify-center items-center">🦁</div>
             </swiper-slide>
-            <swiper-slide class="bg-[#D9D9D9]">
+            <swiper-slide class="">
               <div class="h-[100%] flex justify-center items-center">🦊</div>
             </swiper-slide>
           </swiper>
 
           <div class="flex flex-col justify-center items-center gap-28">
-            <div class="flex w-[90vh] h-[20vh]">
-              <swiper :slidesPerView="3" :space-between="115" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="swiper-wrapper">
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">1</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">2</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">3</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">4</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">5</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">6</div></swiper-slide>
+            <div class="flex w-[90vh] h-[23vh]">
+              <swiper :slidesPerView="3" :space-between="115" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="">
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">1</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">2</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">3</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">4</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">5</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">6</div></swiper-slide>
               </swiper>
             </div>
 
-            <div class="flex w-[90vh] h-[20vh] ">
+            <div class="flex w-[90vh] h-[23vh]" id="teste">
               <swiper :slidesPerView="3" :space-between="115" :modules="modules" :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="swiper-wrapper">
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">1</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">2</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">3</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">4</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">5</div></swiper-slide>
-                <swiper-slide><div class="flex w-[20vh] h-[20vh] bg-[#D9D9D9] justify-center items-center rounded-3xl">6</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">1</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">2</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">3</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">4</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">5</div></swiper-slide>
+                <swiper-slide><div class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra">6</div></swiper-slide>
               </swiper>
             </div>
 
@@ -133,6 +132,10 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div>
+      
     </div>
   </div>
 </template>
@@ -176,7 +179,6 @@ export default {
   display: block;
 }
 
-.swiper-button-prev, .swiper-button-next {
-
+div#teste .swiper-button-prev {
 }
 </style>
