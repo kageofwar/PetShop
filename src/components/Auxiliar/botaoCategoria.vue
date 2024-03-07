@@ -14,11 +14,3 @@ defineProps([
 ]);
 
 </script>
-
-<style>
-
-.sombra {
-    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-</style>

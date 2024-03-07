@@ -11,5 +11,12 @@
     --swiper-navigation-top-offset: 50%;
     --swiper-navigation-sides-offset: 10px;
     --swiper-navigation-color: var(--swiper-theme-color);
-    
+}
+
+.sombra {
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sombra_produtos {
+    box-shadow: 5px 1px 20px 5px rgba(0, 0, 0, 0.2);
 }

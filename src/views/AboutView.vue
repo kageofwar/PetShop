@@ -27,12 +27,13 @@
 
         <div class="grid grid-cols-[25%_75%]">
 
-            <div class="flex justify-center items-center">
+            <div class="flex items-center flex-col">
 
-                <div class="Caixa border-[2px] w-[30vh] rounded-[23px]">
-                    <div class="titulo flex justify-center items-center bg-white h-[5vh] w-[100%] rounded-full"
+                <div class="Filtro1 border-[2px] w-[30vh] rounded-[30px] h-[5.2vh] overflow-hidden transition-height duration-500"
+                    id="Filtro1">
+                    <div class="titulo flex justify-center items-center bg-white h-[5vh] w-[100%] rounded-full cursor-pointer transition ease-in-out delay-150 hover:scale-110"
                         id="titulo">
-                        <h2 class="">Filtro 1 <-Any Name-></h2>
+                        <h2 class="">Primeiro Filtro</h2>
                     </div>
                     <div class="form_check flex flex-col justify-center items-center" id="form_check">
                         <div>
@@ -55,10 +56,111 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center">a</div>
+            <div class="flex justify-center flex-col">
+                <div class="grid grid-cols-4 mb-6">
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                </div>
+                <div class="grid grid-cols-4 mb-6">
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                </div><div class="grid grid-cols-4 mb-6">
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                </div><div class="grid grid-cols-4 mb-6">
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                    <Produto 
+                    linha1="Ração Pedigree Adulto" 
+                    linha2="Nutrientes +" 
+                    linha3="Sabor Carne 1KG" 
+                    valor="R$ 29,90" 
+                    />
+                </div>
+            </div>
         </div>
-
-
         <footerPrincipal />
     </div>
 </template>
@@ -66,15 +168,17 @@
 <script setup>
 import headerPrincipal from "@/components/headerPrincipal.vue";
 import footerPrincipal from "@/components/footerPrincipal.vue";
+import Produto from "@/components/Auxiliar/produto.vue";
 import { onMounted } from "vue";
 
-onMounted ( () => 
-    document.getElementById('titulo').addEventListener('click', function() {
-        console.log('teste')
-    })
+onMounted(() => {
+    document.getElementById('Filtro1').style.height = '5.2vh';
+    document.getElementById('Filtro1').addEventListener('click', function (e) {
+        e.currentTarget.style.height = e.currentTarget.style.height === '5.2vh' ?
+            e.currentTarget.style.height = '16vh' :
+            e.currentTarget.style.height = '5.2vh';
+        })
+    }
 )
-
 </script>
 
-<style>
-</style>
