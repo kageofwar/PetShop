@@ -28,136 +28,33 @@
         <div class="grid grid-cols-[25%_75%]">
 
             <div class="flex items-center flex-col">
-
-                <div class="Filtro1 border-[2px] w-[30vh] rounded-[30px] h-[5.2vh] overflow-hidden transition-height duration-500"
-                    id="Filtro1">
-                    <div class="titulo flex justify-center items-center bg-white h-[5vh] w-[100%] rounded-full cursor-pointer transition ease-in-out delay-150 hover:scale-110"
-                        id="titulo">
-                        <h2 class="">Primeiro Filtro</h2>
-                    </div>
-                    <div class="form_check flex flex-col justify-center items-center" id="form_check">
-                        <div>
-                            <input type="checkbox" name="filtro" id="filtro1">
-                            <label for="filtro1">Any name</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="filtro" id="filtro2">
-                            <label for="filtro2">Any name</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="filtro" id="filtro3">
-                            <label for="filtro3">Any name</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="filtro" id="filtro4">
-                            <label for="filtro4">Any name</label>
-                        </div>
-                    </div>
-                </div>
+                <filtro/>
             </div>
 
             <div class="flex justify-center flex-col">
                 <div class="grid grid-cols-4 mb-6">
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
                 </div>
                 <div class="grid grid-cols-4 mb-6">
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                </div><div class="grid grid-cols-4 mb-6">
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                </div><div class="grid grid-cols-4 mb-6">
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
-                    <Produto 
-                    linha1="Ração Pedigree Adulto" 
-                    linha2="Nutrientes +" 
-                    linha3="Sabor Carne 1KG" 
-                    valor="R$ 29,90" 
-                    />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                </div>
+                <div class="grid grid-cols-4 mb-6">
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                </div>
+                <div class="grid grid-cols-4 mb-6">
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
+                    <Produto texto="Ração Pedigree Adulto Nutrientes + Sabor Carne 1KG" valor="R$ 29,90" />
                 </div>
             </div>
         </div>
@@ -168,17 +65,6 @@
 <script setup>
 import headerPrincipal from "@/components/headerPrincipal.vue";
 import footerPrincipal from "@/components/footerPrincipal.vue";
-import Produto from "@/components/Auxiliar/produto.vue";
-import { onMounted } from "vue";
-
-onMounted(() => {
-    document.getElementById('Filtro1').style.height = '5.2vh';
-    document.getElementById('Filtro1').addEventListener('click', function (e) {
-        e.currentTarget.style.height = e.currentTarget.style.height === '5.2vh' ?
-            e.currentTarget.style.height = '16vh' :
-            e.currentTarget.style.height = '5.2vh';
-        })
-    }
-)
+import Produto from "@/components/Auxiliar/produtosAux/produto.vue";
+import filtro from "@/components/Auxiliar/produtosAux/filtro.vue";
 </script>
-
