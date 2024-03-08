@@ -85,7 +85,7 @@
                 <swiper-slide>
                   <div
                     class="flex mt-1 ml-1 w-[20vh] h-[20vh] justify-center items-center rounded-3xl sombra text-[10vh]">
-                    🐻‍❄️</div>
+                    🐻</div>
                 </swiper-slide>
                 <swiper-slide>
                   <div
