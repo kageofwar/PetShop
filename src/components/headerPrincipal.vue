@@ -32,15 +32,6 @@
     </div>
     <div class="h-[70px]"></div>
   </div>
-
-  <div class="header_categorias bg-white space-x-11 flex justify-center items-center h-[100px]">
-    <botaoCategoria imageName="DogBone.png" categoriaNome="Cachorros" rota="cachorros" />
-    <botaoCategoria imageName="PawPrints.png" categoriaNome="Gatos" />
-    <botaoCategoria imageName="Feather.png" categoriaNome="Pássaros" />
-    <botaoCategoria imageName="Fish.png" categoriaNome="Outros Pets" />
-    <botaoCategoria imageName="SupplementBottle.png" categoriaNome="Remédios" />
-    <botaoCategoria imageName="DogHouse.png" categoriaNome="Casa" />
-  </div>
 </template>
 
 <script>

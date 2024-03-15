@@ -17,13 +17,15 @@
     </div>
 </template>
 
-<script setup>
+<script>
 
-defineProps([
-    'rota',
-    'texto',
-    'valor'
-]);
+export default {
+    props: [
+        'rota',
+        'texto',
+        'valor'
+    ]
+}
 
 
 </script>
