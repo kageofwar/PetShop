@@ -22,13 +22,15 @@
                     <img src="../assets/icons/LimparFiltros.png" alt="">
                 </div>
 
-                <select name="ordenar" id="" class="bg-white w-[25vh] h-14 rounded-full border-[2px] border-black pl-4">
-                    <option disabled selected class="">Ordenar Por</option>
-                    <option value="volvo">Menor Valor</option>
-                    <option value="saab">Maior Valor</option>
-                    <option value="opel">Melhor Avaliado</option>
-                    <option value="audi">Ordem alfabetica</option>
-                </select>
+                <div class="bg-white w-[25vh] h-14 flex justify-center items-center rounded-br-[35px] rounded-tl-[35px] border-[2px] border-black pl-4">
+                    <select name="ordenar" id="" class=" font-bold text-[2vh]">
+                        <option disabled selected >Ordenar Por</option>
+                        <option value="volvo">Menor Valor</option>
+                        <option value="saab">Maior Valor</option>
+                        <option value="opel">Melhor Avaliado</option>
+                        <option value="audi">Ordem alfabetica</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -40,9 +42,8 @@
 
             <div>
                 <div class="grid grid-cols-4 gap-6">
-                    <div v-if="!filtrarProduto" />
-                    <div v-else v-for="produto in filtrarProduto" :key="produto.id">
-                        <Produto :texto="produto.titulo" :valor="produto.valor" />
+                    <div v-for="produto in filtrarProduto" :key="produto.id">
+                        <Produto :texto="produto.titulo" :valor="produto.valor" :rota="produto.id" :categoria="produto.categoria" />
                     </div>
                 </div>
             </div>
@@ -69,18 +70,18 @@ export default {
     data() {
         return {
             produtos: [],
-
         }
     },
     computed: {
         filtrarProduto() {
-            return this.produtos?.filter((produto) => produto.categoria === this.$route.params.rota)
-        }
+            const produtosFiltrados =  this.produtos.produtos?.filter((produto) => produto.categoria === this.$route.params.rota)
+            return produtosFiltrados;
+        },
     },
     mounted() {
         fetch('http://127.0.0.1:8000/api/produtos')
             .then(api => api.json())
-            .then(data => this.produtos = data);
+            .then(data => {this.produtos = data});
     },
 };
 </script>

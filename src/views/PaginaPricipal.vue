@@ -18,7 +18,7 @@
 
     <div class="flex justify-center items-center mt-10">
       <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules" class="mySwiper"
-        :autoplay="{ delay: 2500, disableOnInteraction: false, }">
+        :autoplay="{ delay: 2200, disableOnInteraction: false, }">
         <swiper-slide><img src="../assets/banners/RACOES.gif" class="rounded-full"></swiper-slide>
         <swiper-slide><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></swiper-slide>
         <swiper-slide><img src="../assets/banners/OUTLET.jpg" class="rounded-full"></swiper-slide>
