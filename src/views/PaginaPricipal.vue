@@ -2,14 +2,8 @@
   <div class="h-full bg-[--azul-claro]">
 
     <headerPrincipal />
-    <div class="header_categorias bg-white space-x-11 flex justify-center items-center h-[100px]">
-        <botaoCategoria imageName="DogBone.png" categoriaNome="Cachorros" rota="cachorro" />
-        <botaoCategoria imageName="PawPrints.png" categoriaNome="Gatos" />
-        <botaoCategoria imageName="Feather.png" categoriaNome="Passaros" />
-        <botaoCategoria imageName="Fish.png" categoriaNome="Outros Pets" />
-        <botaoCategoria imageName="SupplementBottle.png" categoriaNome="Remedios" />
-        <botaoCategoria imageName="DogHouse.png" categoriaNome="Casa" />
-      </div>
+    <headerCategoria />
+    
     <div class="header_parcele flex justify-center items-center text-white h-[30px] bg-[--azul-escuro] text-[1.6vh]">
       <img src="../assets/icons/headerIcons/Magnetic Card.png" alt="credit card" class="h-[30px] mb-[8px]">
       <p class="p-[10px]">Parcele em até 3x sem juros. Com parecelas a partir de $75.</p>
@@ -205,6 +199,7 @@
 <script>
 import headerPrincipal from '@/components/headerPrincipal.vue';
 import footerPrincipal from '@/components/footerPrincipal.vue';
+import headerCategoria from '@/components/headerCategoria.vue';
 import botaoRecomendacao from '@/components/Auxiliar/botaoRecomendacao.vue';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -213,7 +208,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import botaoCategoria from '@/components/Auxiliar/botaoCategoria.vue';
 
 export default {
   components: {
@@ -222,7 +216,7 @@ export default {
     headerPrincipal,
     botaoRecomendacao,
     footerPrincipal,
-    botaoCategoria
+    headerCategoria
   },
   setup() {
     return {

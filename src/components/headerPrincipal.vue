@@ -9,14 +9,14 @@
             alt="imagem de lupa" class="h-[6vh]"></a>
       </div>
       <div class="flex space-x-6 h-9" style="list-style: none;">
-        <img src="../assets/icons/headerIcons/Shop.png" alt="shop">
-        <img src="../assets/icons/headerIcons/Shopping Cart.png" alt="carrinho">
+        <img src="../assets/icons/headerIcons/Shop.png" alt="shop" class="transition ease-in-out delay-0 hover:scale-110 duration-300">
+        <img src="../assets/icons/headerIcons/Shopping Cart.png" alt="carrinho" class="transition ease-in-out delay-0 hover:scale-110 duration-300">
 
         <div class="">
           <input type="checkbox" id="menu" class="container__botao hidden">
           <label for="menu">
             <img src="../assets/icons/headerIcons/Phone.png" alt="telefone"
-              class="h-9 transition ease-in-out delay-150 hover:scale-110 duration-300">
+              class="h-9 transition ease-in-out delay-0 hover:scale-110 duration-300">
           </label>
           <div class="lista-menu flex justify-center">
             <div
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <img src="../assets/icons/headerIcons/Name.png" alt="perfil">
+        <img src="../assets/icons/headerIcons/Name.png" alt="perfil" class="transition ease-in-out delay-0 hover:scale-110 duration-300">
       </div>
     </div>
     <div class="h-[70px]"></div>

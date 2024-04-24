@@ -2,7 +2,7 @@
     <div class="w-[30vh] sombra_produtos rounded-[4vh] p-4">
         <router-link :to="`/Produtos/${categoria}/${rota}`">
             <div class="flex items-center justify-center">
-                <img src="../../../assets/produtos/pedrigre.png" alt="" class="h-[180px]">
+                <img :src="`${produtoImagem}`" alt="" class="h-[180px]">
             </div>
             <div class="text-white text-[2.2vh]">
                 <p>{{ texto }}</p>
@@ -24,7 +24,8 @@ export default {
         'rota',
         'categoria',
         'texto',
-        'valor'
+        'valor',
+        'produtoImagem'
     ]
 }
 

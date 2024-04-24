@@ -1,14 +1,9 @@
 <template>
     <div class="bg-[--azul-claro]">
+  
         <headerPrincipal />
-        <div class="header_categorias bg-white space-x-11 flex justify-center items-center h-[100px]">
-            <botaoCategoria imageName="DogBone.png" categoriaNome="Cachorros" rota="cachorro" />
-            <botaoCategoria imageName="PawPrints.png" categoriaNome="Gatos" rota="gato" />
-            <botaoCategoria imageName="Feather.png" categoriaNome="Passaros" />
-            <botaoCategoria imageName="Fish.png" categoriaNome="Outros Pets" />
-            <botaoCategoria imageName="SupplementBottle.png" categoriaNome="Remedios" />
-            <botaoCategoria imageName="DogHouse.png" categoriaNome="Casa" />
-        </div>
+        <headerCategoria />
+
         <img src="../assets/onda-branca-bottom.png" alt="" class="-translate-y-[79px]">
         <div class="grid grid-cols-2 -translate-y-10">
             <div class="flex justify-center items-center flex-col text-[3.2vh] font-bold text-white">
@@ -43,7 +38,7 @@
             <div>
                 <div class="grid grid-cols-4 gap-6">
                     <div v-for="produto in filtrarProduto" :key="produto.id">
-                        <Produto :texto="produto.titulo" :valor="produto.valor" :rota="produto.id" :categoria="produto.categoria" />
+                        <Produto :texto="produto.titulo" :valor="produto.valor" :rota="produto.id" :categoria="produto.categoria" :produtoImagem="produto.img_url" />
                     </div>
                 </div>
             </div>
@@ -55,9 +50,9 @@
 <script>
 import headerPrincipal from "@/components/headerPrincipal.vue";
 import footerPrincipal from "@/components/footerPrincipal.vue";
+import headerCategoria from "@/components/headerCategoria.vue"
 import Produto from "@/components/Auxiliar/produtosAux/produto.vue";
 import filtro from "@/components/Auxiliar/produtosAux/filtro.vue";
-import botaoCategoria from "@/components/Auxiliar/botaoCategoria.vue";
 
 export default {
     components: {
@@ -65,7 +60,7 @@ export default {
         footerPrincipal,
         Produto,
         filtro,
-        botaoCategoria
+        headerCategoria
     },
     data() {
         return {
@@ -74,7 +69,7 @@ export default {
     },
     computed: {
         filtrarProduto() {
-            const produtosFiltrados =  this.produtos.produtos?.filter((produto) => produto.categoria === this.$route.params.rota)
+            const produtosFiltrados =  this.produtos.data?.filter((produto) => produto.categoria === this.$route.params.rota)
             return produtosFiltrados;
         },
     },
