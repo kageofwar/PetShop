@@ -36,7 +36,7 @@
             </div>
 
             <div>
-                <div class="grid grid-cols-4 gap-6">
+                <div class="grid grid-cols-4 gap-6 text-white">
                     <div v-for="produto in filtrarProduto" :key="produto.id">
                         <Produto :texto="produto.titulo" :valor="produto.valor" :rota="produto.id" :categoria="produto.categoria" :produtoImagem="produto.img_url" />
                     </div>
