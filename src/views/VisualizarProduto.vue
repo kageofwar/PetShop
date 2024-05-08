@@ -65,23 +65,9 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-[40%_60%] mt-4 justify-items-center">
-
-      <div class="bg-white rounded-[50px] w-[90%]">
-        <div class="flex items-cente justify-center text-[3.7vh] space-x-28">
-          <img src="../assets/icons/Paste.png" class="h-10">
-            <h2>Ficha Técnica</h2>
-          <img src="../assets/icons/MoreThan.png" class="h-10">
-        </div>
-      </div>
-
-      <div class="bg-white rounded-[50px] w-[90%]">
-        <div class="flex items-center justify-center text-[3.7vh] space-x-48">
-          <img src="../assets/icons/MoreDetails.png" class="h-10">
-            <h2>Descrição do Produto</h2>
-          <img src="../assets/icons/MoreThan.png" class="h-10">
-        </div>
-      </div>
+    <div class="grid grid-cols-[35%_65%] mt-4 justify-items-center">
+      <fichaTecnica :porte="produto.porte" :idade="produto.idade" :racas="produto.racas" :quantidade="produto.quantidade" :sabor="produto.sabor" :pet="produto.categoria" :marca="produto.marca"/>
+      <descricaoProduto :descricao="produto.descricao" :ingredientes="produto.ingredientes"/>
     </div>
 
   </div>
@@ -91,12 +77,16 @@
 import headerPrincipal from '@/components/headerPrincipal.vue';
 import headerCategoria from '@/components/headerCategoria.vue'
 import Produto from '@/components/Auxiliar/produtosAux/produto.vue'
+import fichaTecnica from '@/components/Auxiliar/visualizarProdutoAux/fichaTecnica.vue'
+import descricaoProduto from '@/components/Auxiliar/visualizarProdutoAux/descricaoProduto.vue'
 
 export default {
     components: {
     headerPrincipal,
     headerCategoria,
-    Produto
+    Produto,
+    fichaTecnica,
+    descricaoProduto
   },
   data(){
     return {
