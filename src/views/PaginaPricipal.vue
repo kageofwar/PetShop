@@ -200,7 +200,7 @@
 import headerPrincipal from '@/components/headerPrincipal.vue';
 import footerPrincipal from '@/components/footerPrincipal.vue';
 import headerCategoria from '@/components/headerCategoria.vue';
-import botaoRecomendacao from '@/components/Auxiliar/botaoRecomendacao.vue';
+import botaoRecomendacao from '@/components/Auxiliar/paginaPrincipal/botaoRecomendacao.vue';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';

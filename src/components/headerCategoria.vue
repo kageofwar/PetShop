@@ -9,7 +9,7 @@
       </div>
 </template>
 <script>
-import botaoCategoria from "../components/Auxiliar/botaoCategoria.vue"
+import botaoCategoria from "../components/Auxiliar/headerAux/botaoCategoria.vue"
 
 export default {
     components: {

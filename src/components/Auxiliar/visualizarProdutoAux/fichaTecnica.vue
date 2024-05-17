@@ -1,11 +1,10 @@
 <template>
-    <div id="caixa" class="bg-white rounded-[25px] w-[98%] transition-height duration-1000 overflow-hidden">
-        <div class="flex items-cente justify-center text-[3.7vh] space-x-28">
-          <img src="../../../assets/icons/Paste.png" class="h-10">
+    <div id="caixa" class="bg-white rounded-[15px] w-[100%] transition-height duration-1000 overflow-hidden">
+        <div class="flex justify-center text-[3.7vh] font-semibold">
+            <img src="../../../assets/icons/Paste.png" class="h-10">
             <h2 class="">Ficha Técnica</h2>
-          <img src="../../../assets/icons/MoreThan.png" class="h-10">
         </div>
-        <div class="[&>*]:grid [&>*]:grid-cols-[25%_75%] divide-y-2 divide-black text-[2.5vh] break-words">
+        <div class="[&>*]:grid [&>*]:grid-cols-[25%_75%] divide-y-2 divide-black text-[2vh] break-words">
             <div><h2>Porte</h2><h2>{{ porte }}</h2></div>
             <div><h2>Idade</h2><h2>{{ idade }}</h2></div>
             <div><h2>Raças</h2><h2>{{ racas }}</h2></div>
