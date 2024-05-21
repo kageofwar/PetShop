@@ -4,6 +4,7 @@
     <headerPrincipal />
     <headerCategoria />
 
+    <!-- Container para vizualizar produto -->
     <div class="flex justify-center items-center">
       <div class="grid grid-cols-2 bg-white items-center mb-1 mt-1 w-[80%] rounded-t-xl">
         <div>
@@ -75,19 +76,45 @@
       </div>
     </div>
 
+    <!-- Container para informações do produto -->
+    <div class="flex justify-center">
+      <div class="bg-white w-[80%] grid grid-cols-[38%_62%] h-[70vh]">
+        
+        <div class="flex justify-center items-center my-10"> <!-- Ficha Tecnica -->
+          <div class="flex flex-col w-[80%] border-[2px] border-black rounded-lg">
+              <div class="flex items-center justify-center">
+                <img src="../assets/icons/Paste.png" class="h-12">
+                <h2 class="text-[2.5vh] p-5">Ficha Tecnica</h2>
+              </div>
+              <div class="[&>*]:grid [&>*]:grid-cols-[25%_75%] [&>*]:items-center [&>*]:p-4 text-[1.8vh] text-center divide-y-[1px] divide-black break-words">
+                <div class="bg-blue-300"><h2>Porte</h2><h2>{{ produto.porte }}</h2></div>
+                <div class="bg-gray-200"><h2>Idade</h2><h2>{{ produto.idade }}</h2></div>
+                <div class="bg-blue-300"><h2>Raças</h2><h2>{{ produto.racas }}</h2></div>
+                <div class="bg-gray-200"><h2>Quantidade</h2><h2>{{ produto.quantidade }}</h2></div>
+                <div class="bg-blue-300"><h2>Sabor</h2><h2>{{ produto.sabor }}</h2></div>
+                <div class="bg-gray-200"><h2>Pet</h2><h2>{{ produto.categoria }}</h2></div>
+                <div class="bg-blue-300 rounded-b-[5px]"><h2>Marca</h2><h2>{{ produto.marca }}</h2></div>
+              </div>
+          </div>
+        </div>
 
-    <div class="flex justify-center items-center">
-      <div class="w-[145vh]">
-        <div class="grid grid-cols-[35%_65%] mt-1 justify-items-center space-x-1">
-          
-          <fichaTecnica :porte="produto.porte" :idade="produto.idade" :racas="produto.racas"
-            :quantidade="produto.quantidade" :sabor="produto.sabor" :pet="produto.categoria" :marca="produto.marca" />
-          
-          <descricaoProduto :descricao="produto.descricao" :ingredientes="produto.ingredientes" />
-
+        <div class="flex justify-center items-center">
+          <div class=" rounded-[15px] h-[65vh] overflow-hidden"> <!-- Descrição do Produto -->
+            <div class="flex items-center justify-center text-[3vh] font-semibold">
+              <img src="../assets/icons/MoreDetails.png" class="h-10 mt-1">
+              <h2>Detalhes do Produto</h2>
+            </div>
+            <div class="break-words h-[65vh] pr-3 overflow-auto">
+              <div class="flex items-center space-x-2 p-3"><h2 class="text-[2.5vh]">Descrição</h2><img src="../assets/icons/felcha_com_curva.svg" class="h-6 scale-x-[-1] rotate-90 mt-3"></div>
+              <p>{{ produto.descricao }}</p>
+              <div class="flex items-center space-x-2 p-3"><h2 class="text-[2.5vh]">Ingerdientes</h2><img src="../assets/icons/felcha_com_curva.svg" class="h-6 scale-x-[-1] rotate-90 mt-3"></div>
+                <p>{{ produto.ingredientes }}</p>        
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
 
     <footerPrincipal />
   </div>
@@ -126,3 +153,19 @@
     }
   }
 </script>
+
+<style scoped>
+*::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(194, 196, 200);    /* color of the scroll thumb */
+  border-radius: 50px;       /* roundness of the scroll thumb */
+  border: 4px solid white;  /* creates padding around scroll thumb */
+}
+</style>
