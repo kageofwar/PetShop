@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full bg-[--azul-claro]">
+  <div class="h-full bg-[--azul-claro] z-10">
 
     <headerPrincipal />
     <headerCategoria />
@@ -9,39 +9,39 @@
       <p class="p-[10px]">Parcele em até 3x sem juros. Com parecelas a partir de $75.</p>
       <img src="../assets/icons/headerIcons/Magnetic Card.png" alt="credit card" class="h-[30px] mb-[8px]">
     </div>
-
-    <div class="flex justify-center items-center mt-10">
-      <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules" class="mySwiper"
-        :autoplay="{ delay: 2200, disableOnInteraction: false, }">
-        <swiper-slide><img src="../assets/banners/RACOES.gif" class="rounded-full"></swiper-slide>
-        <swiper-slide><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></swiper-slide>
-        <swiper-slide><img src="../assets/banners/OUTLET.jpg" class="rounded-full"></swiper-slide>
-        <swiper-slide><img src="../assets/banners/TAPETES.gif" class="rounded-full"></swiper-slide>
+    
+    <div class="flex justify-center items-center self-center mt-5">
+      <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :navigation="true" :modules="modules" :autoplay="{ delay: 2300, disableOnInteraction: false, }" class="w-[80%]">
+        <swiper-slide><div class="flex items-center justify-center"><div class="w-[90%]"><img src="../assets/banners/RACOES.gif" class="rounded-full"></div></div></swiper-slide>
+        <swiper-slide><div class="flex items-center justify-center"><div class="w-[90%]"><img src="../assets/banners/BRINQUEDOS.gif" class="rounded-full"></div></div></swiper-slide>
+        <swiper-slide><div class="flex items-center justify-center"><div class="w-[90%]"><img src="../assets/banners/OUTLET.jpg" class="rounded-full"></div></div></swiper-slide>
+        <swiper-slide><div class="flex items-center justify-center"><div class="w-[90%]"><img src="../assets/banners/TAPETES.gif" class="rounded-full"></div></div></swiper-slide>
       </swiper>
-    </div>
-
-    <div class="mt-16">
-      <img src="../assets/onda-branca-top.png" alt="">
-      <div class="bg-white">
-        <div class="flex justify-center -translate-y-20">
-          <h2 class="text-[5vh] text-[--azul-claro] font-bold">Seu Pet também pode gostar ❤️</h2>
-        </div>
-
-        <div class="grid grid-cols-[40%_60%] justify-items-center">
-
-          <swiper :direction="'vertical'" :pagination="{ clickable: true }" :modules="modules"
-            :autoplay="{ delay: 2500, disableOnInteraction: false, }"
-            class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
-            <swiper-slide class="">
-              <div class="h-[100%] flex justify-center items-center">🐵</div>
-            </swiper-slide>
-            <swiper-slide class="">
-              <div class="h-[100%] flex justify-center items-center">🦁</div>
-            </swiper-slide>
-            <swiper-slide class="">
-              <div class="h-[100%] flex justify-center items-center">🦊</div>
-            </swiper-slide>
-          </swiper>
+  </div>
+  
+  <div class="mt-5">
+    <img src="../assets/onda-branca-top.png" alt="" >
+    <img src="../assets/onda-branca-bottom.png" alt="" class="translate-y-[490px] absolute">
+    <div class="bg-white -translate-y-20">
+      <div class="flex justify-center -translate-y-10">
+        <h2 class="text-[5vh] text-[--azul-claro] font-bold">Seu Pet também pode gostar ❤️</h2>
+      </div>
+      
+      <div class="grid grid-cols-[40%_60%] justify-items-center p-5">
+        
+        <swiper :direction="'vertical'" :pagination="{ clickable: true }" :modules="modules"
+        :autoplay="{ delay: 2500, disableOnInteraction: false, }"
+        class="h-[60vh] w-[70%] text-[30vh] rounded-3xl sombra cursor-help">
+        <swiper-slide class="">
+          <div class="h-[100%] flex justify-center items-center">🐵</div>
+        </swiper-slide>
+        <swiper-slide class="">
+          <div class="h-[100%] flex justify-center items-center">🦁</div>
+        </swiper-slide>
+        <swiper-slide class="">
+          <div class="h-[100%] flex justify-center items-center">🦊</div>
+        </swiper-slide>
+      </swiper>
 
           <div class="flex flex-col justify-center items-center gap-28">
             <div class="flex w-[90vh] h-[23vh]">
@@ -80,7 +80,7 @@
               </swiper>
             </div>
 
-            <div class="flex w-[90vh] h-[23vh]" id="teste">
+            <div class="flex w-[90vh] h-[23vh]" id="">
               <swiper :slidesPerView="3" :space-between="115" :modules="modules"
                 :autoplay="{ delay: 2500, disableOnInteraction: false, }" class="swiper-wrapper">
                 <swiper-slide>
@@ -115,17 +115,14 @@
                 </swiper-slide>
               </swiper>
             </div>
-
           </div>
         </div>
-
       </div>
-      <img src="../assets/onda-branca-bottom.png" alt="" class="-translate-y-[80px]">
     </div>
-
-    <div class="m-[4vh_0]">
+    
+    <div class="m-[8vh_0_4vh_0]">
       <div>
-        <h2 class="text-white ml-20 text-[4vh]">Algumas das marcas que trabalhamos</h2>
+        <h2 class="text-white ml-32 text-[4vh]">Algumas das marcas que trabalhamos</h2>
       </div>
       <div class="flex justify-center items-center">
         <div class="grid grid-cols-6 w-[90%] gap-1">
