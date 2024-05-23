@@ -8,7 +8,7 @@
     <div class="flex justify-center items-center">
       <div class="grid grid-cols-2 bg-white items-center mb-1 mt-1 w-[80%] rounded-t-xl">
         <div>
-          <div class="pl-28">
+          <div> <!-- Barra com Marca/Categoria/Compartilhar -->
             <div class="grid grid-cols-3 divide-x-2">
               <div class="w-[100%] flex justify-center items-center">
                 <img src="../assets/logoMarcas/pedigree-logo-6.png" alt="logo da marca" class="h-10">
@@ -23,7 +23,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[15%_85%]">
+          <div class="grid grid-cols-[15%_85%]"> <!-- Imagens do produto -->
             <div class="flex flex-col items-center">
                 <div class="flex justify-center items-center">
                   <img src="../assets/icons/seta.svg" alt="" class="h-10 cursor-pointer">
@@ -45,7 +45,7 @@
           </div>
         </div>
 
-        <div>
+        <div> 
           <div class="flex flex-col  bg-white rounded-[20px] h-[46vh] p-5">
             <p class=" w-[500px] text-[3.5vh] flex">{{ produto.titulo }}</p>
             <div class="flex text-[2.5vh]">
@@ -56,11 +56,12 @@
               </div>
             </div>
             <a href="#descricao" class="font-bold text-gray-300"><u>Ver Descrição Completa</u></a>
-            <div class="grid grid-cols-2 items-center">
+            <div class="grid grid-cols-3 items-center">
               <h2 class="text-[4vh] font-semibold mt-5 ">R${{ produto.valor }}</h2>
-              <button class="bg-[--azul-escuro] w-[25vh] h-[7vh] flex justify-center items-center rounded-3xl text-white font-bold text-[3.2vh] mt-[4vh]">Comprar</button>
+              <button class="bg-[--azul-escuro] w-[16vh] h-[6vh] flex justify-center items-center rounded-3xl text-white font-bold text-[2.5vh] mt-[4vh] transition ease-in-out delay-0 hover:scale-110 duration-150">Comprar</button>
+              <button class="bg-[--azul-escuro] w-[16vh] h-[6vh] flex justify-center items-center rounded-3xl text-white font-bold text-[2.5vh] mt-[4vh] transition ease-in-out delay-0 hover:scale-110 duration-150">Carrinho</button>
             </div>
-            <h2 class="mb-10">À vista no PIX com até 10% OFF</h2>
+            <h2 class="my-5">À vista no PIX com até 10% OFF</h2>
             <produtosSimilares />
           </div>
         </div>
@@ -70,7 +71,7 @@
               <img src="../assets/icons/Truck.png" class="h-[6vh]">
               <h2>Frete e Prazo: </h2>
               <input type="text" class="flex p-2 justify-center text-center items-center border-[1px] border-black rounded-full placeholder:text-center" placeholder="Digite seu CEP">
-              <button class="bg-[--azul-escuro] w-[20vh] h-[5vh] flex justify-center items-center rounded-3xl text-white">Calcular</button>
+              <button class="bg-[--azul-escuro] w-[20vh] h-[5vh] flex justify-center items-center rounded-3xl text-white transition ease-in-out delay-0 hover:scale-110 duration-150">Calcular</button>
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@
 
     <!-- Container para informações do produto -->
     <div class="flex justify-center">
-      <div class="bg-white w-[80%] grid grid-cols-[38%_62%] h-[70vh]">
+      <div class="bg-white w-[80%] grid grid-cols-[38%_62%] h-[80vh] rounded-b-xl">
         
         <div class="flex justify-center items-center my-10"> <!-- Ficha Tecnica -->
           <div class="flex flex-col w-[80%] border-[2px] border-black rounded-lg">
@@ -98,8 +99,8 @@
           </div>
         </div>
 
-        <div class="flex justify-center items-center">
-          <div class=" rounded-[15px] h-[65vh] overflow-hidden"> <!-- Descrição do Produto -->
+        <div class="flex justify-center items-center"> <!-- Detalhes do Produto -->
+          <div class=" rounded-[15px] h-[65vh] overflow-hidden">
             <div class="flex items-center justify-center text-[3vh] font-semibold">
               <img src="../assets/icons/MoreDetails.png" class="h-10 mt-1">
               <h2>Detalhes do Produto</h2>
@@ -112,11 +113,12 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
-
     <footerPrincipal />
+
   </div>
 </template>
 
@@ -124,8 +126,6 @@
   import headerPrincipal from '@/components/headerPrincipal.vue';
   import headerCategoria from '@/components/headerCategoria.vue'
   import Produto from '@/components/Auxiliar/produtosAux/produto.vue'
-  import fichaTecnica from '@/components/Auxiliar/visualizarProdutoAux/fichaTecnica.vue'
-  import descricaoProduto from '@/components/Auxiliar/visualizarProdutoAux/descricaoProduto.vue'
   import footerPrincipal from '@/components/footerPrincipal.vue'
   import produtosSimilares from '@/components/Auxiliar/visualizarProdutoAux/produtosSimilares.vue'
 
@@ -135,8 +135,6 @@
       headerPrincipal,
       headerCategoria,
       Produto,
-      fichaTecnica,
-      descricaoProduto,
       footerPrincipal,
       produtosSimilares
     },

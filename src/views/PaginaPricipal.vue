@@ -19,11 +19,11 @@
       </swiper>
   </div>
   
-  <div class="mt-5">
+  <div class="mt-10">
     <img src="../assets/onda-branca-top.png" alt="" >
     <img src="../assets/onda-branca-bottom.png" alt="" class="translate-y-[490px] absolute">
     <div class="bg-white -translate-y-20">
-      <div class="flex justify-center -translate-y-10">
+      <div class="flex justify-center">
         <h2 class="text-[5vh] text-[--azul-claro] font-bold">Seu Pet também pode gostar ❤️</h2>
       </div>
       
@@ -120,7 +120,7 @@
       </div>
     </div>
     
-    <div class="m-[8vh_0_4vh_0]">
+    <div class="m-[15vh_0_4vh_0]">
       <div>
         <h2 class="text-white ml-32 text-[4vh]">Algumas das marcas que trabalhamos</h2>
       </div>
