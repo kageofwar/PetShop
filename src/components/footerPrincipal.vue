@@ -51,17 +51,17 @@
                 <h2>Compre também</h2>
                 <h2>pelo WhatsApp!</h2>
             </div>
-            <img src="../assets/icons/footerIcons/WhatsApp.png" alt="">
+            <img src="../assets/icones/footericons/WhatsApp.png" alt="">
         </div>
 
         <div>
             <div class="flex flex-col justify-center items-center p-5 gap-2">
                 <h2>Redes Sociais</h2>
                 <div class="flex space-x-4">
-                    <img src="../assets/icons/footerIcons/redesSociais/instagram-icon.svg" alt="">
-                    <img src="../assets/icons/footerIcons/redesSociais/facebook.png" alt="">
-                    <img src="../assets/icons/footerIcons/redesSociais/linkedin.png" alt="">
-                    <img src="../assets/icons/footerIcons/redesSociais/pinterest.png" alt="">
+                    <img src="../assets/icones/footericons/redesSociais/instagram-icon.svg" alt="">
+                    <img src="../assets/icones/footericons/redesSociais/facebook.png" alt="">
+                    <img src="../assets/icones/footericons/redesSociais/linkedin.png" alt="">
+                    <img src="../assets/icones/footericons/redesSociais/pinterest.png" alt="">
                 </div>
             </div>
 
@@ -69,19 +69,20 @@
                 <div class="flex flex-col justify-center items-center p-5">
                     <h2>Formas Pagamento</h2>
                     <div class="flex justify-center items-center space-x-2">
-                        <img src="../assets/icons/footerIcons/formasPagamento/elo-logo.png" class="w-[50px] h-[20px]"
+                        <img src="../assets/icones/footericons/formasPagamento/elo-logo.png" class="w-[50px] h-[20px]"
                             alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/visa-logo.png" class="w-[48px] h-[17px]"
+                        <img src="../assets/icones/footericons/formasPagamento/visa-logo.png" class="w-[48px] h-[17px]"
                             alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/hypercard-logo.png"
+                        <img src="../assets/icones/footericons/formasPagamento/hypercard-logo.png"
                             class="w-[40px] h-[18px]" alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/barcode-icon.png" class="h-[20px]" alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/pix-transparent.svg" class="h-[25px]"
+                        <img src="../assets/icones/footericons/formasPagamento/barcode-icon.png" class="h-[20px]"
                             alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/mastercard-logo.png" alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/dinersclub-logo.png"
+                        <img src="../assets/icones/footericons/formasPagamento/pix-transparent.svg" class="h-[25px]"
+                            alt="">
+                        <img src="../assets/icones/footericons/formasPagamento/mastercard-logo.png" alt="">
+                        <img src="../assets/icones/footericons/formasPagamento/dinersclub-logo.png"
                             class="w-[30px] h-[20px]" alt="">
-                        <img src="../assets/icons/footerIcons/formasPagamento/americanexpress-logo.png" alt="">
+                        <img src="../assets/icones/footericons/formasPagamento/americanexpress-logo.png" alt="">
                     </div>
                 </div>
             </div>
