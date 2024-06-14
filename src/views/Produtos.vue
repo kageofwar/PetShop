@@ -78,7 +78,9 @@ export default {
     mounted() {
         fetch('http://127.0.0.1:8000/api/produtos')
             .then(api => api.json())
-            .then(data => { this.produtos = data });
+            .then(data => { this.produtos = data,
+                console.log(this.filtrarProduto)
+            });
     },
 };
 </script>
