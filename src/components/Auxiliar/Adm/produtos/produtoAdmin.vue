@@ -13,9 +13,9 @@
             <p>{{ dataCadastro }}</p>
         </div>
         <div class="flex items-center justify-center gap-10">
-            <img src="../../../assets/administracao/Produtos/vizualizar.svg" class="h-10 cursor-pointer transition hover:scale-110">
-            <img src="../../../assets/administracao/Produtos/editar.svg" class="h-10 cursor-pointer transition hover:scale-110">
-            <img src="../../../assets/administracao/Produtos/excluir.svg" class="h-10 cursor-pointer transition hover:scale-110">
+            <img src="../../../../assets/administracao/Produtos/vizualizar.svg" class="h-10 cursor-pointer transition hover:scale-110">
+            <img src="../../../../assets/administracao/Produtos/editar.svg" class="h-10 cursor-pointer transition hover:scale-110" id="updateDetails">
+            <img src="../../../../assets/administracao/Produtos/excluir.svg" class="h-10 cursor-pointer transition hover:scale-110">
         </div>
     </div>
     
